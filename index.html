@@ -12,7 +12,8 @@
     <button id= "anim2" class= "botao">HIPERMÉDIA</button>
     <button id= "anim3" class= "botao">HIPERMÉDIA</button>
     <button id= "anim4" class= "botao">HIPERMÉDIA</button>
-
+    <button id= "anim5" class= "botao"><span id= "anim5-span">HIPERMÉDIA</span></button>
+    <button id= "anim6" class="botao"><span id= "text">HIPERMÉDIA</span></button>
 <style>
     .botao {
         width: 150px;
@@ -127,6 +128,102 @@
         height: 100%;
     }
 
+    #anim5 {
+        position: relative;
+    }
+
+    #anim5::before {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition-duration: 200ms;
+        content: '';
+        position: absolute;
+        background-color: blueviolet;
+    }
+    
+    #anim5::after {
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 3px;
+        transition-duration: 200ms;
+        transition-delay: 200ms;
+        content: '';
+        position: absolute;
+        background-color: blueviolet;
+    }
+
+    #anim5:hover::before,
+    #anim5:hover::after {
+        width: 100%;
+    }
+
+    #anim5-span::after {
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 3px;
+        transition-duration: 200ms;
+        transition-delay: 200ms;
+        content: '';
+        position: absolute;
+        background-color: blueviolet;    
+    }
+
+    #anim5-span:hover::before,
+    #anim5-span:hover::after {
+        height: 100%;
+    }
+
+    #anim6 {
+        position: relative;
+        border: 2px solid blueviolet;
+        transition-duration: 0.4s;
+    }
+
+    #anim6::after {
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        transition-duration: 0.4s;
+        border-width: 0 0 0 0;
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-color: transparent blueviolet transparent transparent;
+    }
+
+    #anim6::before {
+        bottom: 0;
+        right: 0;
+        height: 0;
+        width: 0;
+        transition-duration: 0.4s;
+        border-width: 0 0 0 0;
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-color: transparent transparent blueviolet transparent;
+    }
+
+    #text {
+        transition-duration: 0.4s;
+    }
+
+    #anim6:hover > #text {
+        padding-right: 30px;
+    }
+
+    #anim6:hover::after {
+        border-width: 0 40px 40px 0;
+    }
+
+    #anim6:hover::before {
+        border-width: 0 0 40px 40px;
+    }
 </style>
 </body>
 </html>
