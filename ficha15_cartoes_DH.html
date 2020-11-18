@@ -8,16 +8,96 @@
 </head>
 
 <body>
-    <div class="cartoes">
+    <div class="cartao1">
         <div class="box">
             <div class="img">
-                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZmPcIbAW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dzone.com/storage/temp/12334613-971.jpg" alt="">
-            </div>               
+                <img src="https://www.centumcellae.it/wp-content/uploads/2013/02/matematica.jpg" alt="Matemática">
+            </div>   
+            <div class="content">
+                <h2>Matemática</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, explicabo.</p>
+                 <a href="#">Saber +</a>   
+            </div>            
+        </div>
+        <div class="box">
+            <div class="img">
+                <img src="https://redislabs.com/wp-content/uploads/2019/09/blog-async-368x260.jpeg" alt="Programa">
+            </div>
+            <div class="content">
+                <h2>Programa</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quam.</p>
+                <a href="#">Informações</a>
             </div>
         </div>
         <div class="box">
-            <div class="img"></div>
+            <div class="img">
+                <img src="https://i.ytimg.com/vi/nwVAUG67PFY/hqdefault.jpg" alt="Universo">
+            </div>
+            <div class="content">
+                <h2>Ciência</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, vel!</p>
+                <a href="#">Saber mais</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img src="https://cdn.hintigo.com.br/uploads/2016/02/faculdade-de-matematica-425x318.jpg" alt="Equações"></a>
+            </div>
+            <div class="content">
+                <h2>Equações</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, rem?</p>
+                <a href="#">Info</a>
+            </div>
         </div>
     </div>    
 </body>
+
+<style>
+    img {
+        /* width: 200px;
+        height: 210px; */
+        max-width:200px;
+        max-height:170px;
+        width: auto;
+        height: auto;
+    }
+    .cartao1 {
+        /* width: 1200px; */
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        font-family: consolas;
+    }
+
+    .cartao1 .box {
+        width: 280px;
+        height: 400px;
+        /* width: 100%;
+        height: 100%; */
+        margin: 20px 0;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0, 5);
+        overflow: hidden;
+        /* overflow: auto; */
+    }
+
+    .cartao1 .box .img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        clip-path: circle(400px at center 100px);
+        position: relative;
+        background: #000;
+    }
+
+    .cartao1 .box:hover .img {
+        transition-delay: 0s;
+        clip-path: circle(80px at center 100px);
+    }
+</style>
 </html>
